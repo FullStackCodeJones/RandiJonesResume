@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color:#13ffff;
+    --text-color: #0a0401;
+}
+html {
+    font-size: 14px;
+}
+body {
+    font-family: Inter, sans-serif;
+    background-color: teal;
+    color: white;
+}
+
+/*common styles*/
+img {
+    width: 100%;
+}
+a {
+    text-decoration: solid;
+    color: white;
+}
+.description {
+margin-top: 1rem;
+font-size: 1.5rem;
+font-weight: 400;
+color: var(--text-color);
+}
+.title {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.item_preTitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+.item-title {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+.item_subtitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+/*layouts*/
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0% auto;
+    display: grid;
+    padding: 5rem;
+    background:none;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    }
+    @media only screen and (max-width: 768px) {
+        .container {
+            width: 100%;
+            grid-template-columns: 1fr;
+            padding: 3rem;
+            gap: 7rem;
+        }
+       }
+    .profile {
+        grid-column: 1/ -1;
+        margin-bottom: 2rem;
+    }
+.group-1, .group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+    /*profile*/
+.profile_container {
+    display: flex;
+    gap: 2rem;
+}
+.profile_profileImg {
+    max-width: 250px;
+}
+.profile_name_firstName {
+    color: azure;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-transform: uppercase ;
+    display: block;
+    margin-bottom: -0.8rem;
+}
+.profile_name_lastName {
+    color: coral;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase ;
+    display: block;
+}
+.profile_title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.download {
+    display: block;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.download:hover {
+    color: var(--primary-color);
+}
+@media only screen and (max-width: 768px) {
+    .profile_container {
+        flex-direction: column;
+    }
+}
+
+/* Technical Skills*/
+.skill_list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+/* Education*/
+.education_item {
+    margin-top: 2rem;
+    }
+.education_name {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+ /* Certification*/
+.certification_item {
+margin-top: 2rem;
+}
+/* Exp*/
+.exp_item{
+    margin-top: 2rem;
+}
+/* Interests*/
+
+.interest_item {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 2rem;
+}
+.interest_item{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--text-color);
+}
+.interest_item svg{
+    width: 2rem;
+}
